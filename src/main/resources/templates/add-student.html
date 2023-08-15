@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Add Bootstrap to Thymeleaf</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+<!--<div th:insert="navbar :: navbar">  </div>-->
+
+<form action="/add-student" method="post">
+    <input type="text" name="name" placeholder="Insert name..."><br><br>
+    <input type="text" name="surname" placeholder="Insert surname..."><br><br>
+    <input type="number" name="exam" placeholder="Insert exam..."><br><br>
+    <button>ADD STUDENT</button>
+</form>
+
+</body>
+</html>

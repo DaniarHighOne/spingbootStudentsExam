@@ -7,7 +7,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -19,6 +18,11 @@ public class HomePageControler {
         model.addAttribute("students", students);
         return "main";
     }
+    @GetMapping("/add-student")
+    public String addStudentPage(){
+        return "add-student";
+    }
+
     @PostMapping("/add-student")
     public String addStudent(Student student){
         DBmanager.addStudent(student);
