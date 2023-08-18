@@ -19,6 +19,7 @@
       <th>SURNAME</th>
       <th>EXAM</th>
       <th>MARK</th>
+      <th>DETAILS</th>
     <tbody>
     <tr th:each="student: ${students}">
         <td th:text="${student.id}"></td>
@@ -26,6 +27,7 @@
         <td th:text="${student.surname}"></td>
         <td th:text="${student.exam}"></td>
         <td th:text="${student.mark}"></td>
+        <td><a th:href="${'/details/'+ student.id}">DETAILS</a> </td>
     </tr>
     </tbody>
   </thead>

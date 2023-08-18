@@ -5,6 +5,7 @@ import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class DBmanager {
     @Getter
@@ -36,4 +37,17 @@ public class DBmanager {
         students.add(student);
     }
 
+    public static Student getStudentByid(Long id){
+        return students.stream().filter(students -> Objects.equals(students.getId(), id))
+                .findFirst()
+                .orElseThrow();
+    }
+
+
+    public static void editStudent(Long id, String name, String surname, Integer exam) {
+        Student student = getStudentByid(id);
+        student.setName(name);
+        student.setSurname(surname);
+        student.setExam(exam);
+    }
 }
